@@ -3,13 +3,21 @@ package main
 import "fmt"
 
 func Ft_profit(prices []int) int {
-	profit := 0
+	if len(prices) == 0 {
+		return 0
+	}
+
+	minimumPrice := prices[0]
+	maximumProfit := 0
+
 	for i := 1; i < len(prices); i++ {
-		if prices[i] > prices[i-1] {
-			profit += prices[i] - prices[i-1]
+		if prices[i] < minimumPrice {
+			minimumPrice = prices[i]
+		} else if prices[i]-minimumPrice > maximumProfit {
+			maximumProfit = prices[i] - minimumPrice
 		}
 	}
-	return profit
+	return maximumProfit
 }
 
 func main() {
