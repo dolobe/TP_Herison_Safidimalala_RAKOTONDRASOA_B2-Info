@@ -1,4 +1,4 @@
-package ymmersion
+package main
 
 import (
 	"fmt"
