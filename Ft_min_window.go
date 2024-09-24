@@ -14,7 +14,7 @@ func Ft_min_window(s string, t string) string {
 
 	first := 0
 	fin := 0
-	minimum := len(s) + 1
+	min := len(s) + 1
 	count := len(t)
 	start := 0
 
@@ -26,8 +26,8 @@ func Ft_min_window(s string, t string) string {
 		fin++
 
 		for count == 0 {
-			if fin-first < minimum {
-				minimum = fin - first
+			if fin-first < min {
+				min = fin - first
 				start = first
 			}
 			tab[s[first]]++
@@ -37,10 +37,10 @@ func Ft_min_window(s string, t string) string {
 			first++
 		}
 	}
-	if minimum == len(s)+1 {
+	if min == len(s)+1 {
 		return ""
 	}
-	return s[start : start+minimum]
+	return s[start : start+min]
 
 }
 
