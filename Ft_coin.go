@@ -25,7 +25,7 @@ func Ft_coin(coins []int, amount int) int {
 			}
 		}
 	}
-	if tableau[amount] < amount {
+	if tableau[amount] > amount {
 		fmt.Println(-1)
 		return -1
 	}
