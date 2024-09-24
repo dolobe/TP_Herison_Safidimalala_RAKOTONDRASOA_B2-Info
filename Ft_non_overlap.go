@@ -17,7 +17,7 @@ func Ft_non_overlap(intervals [][]int) int {
 	value := 1
 	sum := intervals[0][1]
 	for i := 1; i < len(intervals); i++ {
-		if intervals[i][0] <= sum {
+		if intervals[i][0] >= sum {
 			value++
 			sum = intervals[i][1]
 		}
