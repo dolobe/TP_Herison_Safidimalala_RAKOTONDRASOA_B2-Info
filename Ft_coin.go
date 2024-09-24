@@ -33,3 +33,9 @@ func Ft_coin(coins []int, amount int) int {
 	fmt.Println(tableau[amount])
 	return tableau[amount]
 }
+
+func main() {
+	fmt.Println(Ft_coin([]int{1, 2, 5}, 11))
+	fmt.Println(Ft_coin([]int{2}, 3))
+	fmt.Println(Ft_coin([]int{1}, 0))
+}
